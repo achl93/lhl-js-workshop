@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <style>
+    body {
+      background-color: white;
+      color: #303030;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 15px;
+      margin: 20px;
+    }
+
+    .main {
+      background-color: #f0f0f0;
+      border-radius: 6px;
+      box-shadow: 3px 3px 12px #c8c8c8;
+      margin: 20px auto;
+      max-width: 450px;
+      padding: 20px;
+    }
+
+    ol {
+      list-style: none;
+      margin-bottom: 20px;
+      margin-top: 0;
+      padding: 0;
+    }
+
+    li {
+      padding: 10px;
+    }
+
+    li:nth-child(odd) {
+      background-color: #e3e3e3;
+      border-radius: 6px;
+    }
+
+    form {
+      background-color: lightsteelblue;
+      border-radius: 6px;
+      margin: 0;
+      padding: 10px;
+    }
+
+    button {
+      background-color: cornflowerblue;
+      border: none;
+      border-radius: 3px;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      text-transform: uppercase;
+    }
+
+    input {
+      border: none;
+      border-radius: 3px;
+      font-size: 15px;
+      padding: 5px;
+    }
+
+    #initials {
+      width: 40px;
+    }
+
+    #message {
+      width: 315px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <main class="main" style="max-height: 500px;overflow-y: scroll;">
+    <ol id="history">
+    </ol>
+  </main>
+  <form class="main">
+      <input id="initials" maxlength="2">
+      <input id="message" maxlength="100">
+      <button>Send</button>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
